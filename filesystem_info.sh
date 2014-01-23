@@ -12,14 +12,14 @@ inode=false
 
 ##### Functions #####
 error_msg() {
-    echo "Info_Ocupa_Sist_Fich: Missing arguments"
-    echo "Info_Ocupa_Sist_Fich: Syntax: 'Info_Ocupa_Sist_Fich -[OPTIONS]'"
-    echo "Info_Ocupa_Sist_Fich: Run 'Info_Ocupa_Sist_Fich --help' for more options"
+    echo "filesystem_info: Missing arguments"
+    echo "filesystem_info: Syntax: 'filesystem_info -[OPTIONS]'"
+    echo "filesystem_info: Run 'filesystem_info --help' for more options"
     exit 1
 }
 
 show_help() {
-    printf "\nUsage: Info_Ocupa_Sist_Fich -[OPTIONS]
+    printf "\nUsage: filesystem_info -[OPTIONS]
 
 Displays information about mounted filesystems
 
@@ -30,9 +30,9 @@ Mandatory arguments to long options are mandatory for short options too.
   -b, --bocks    display information about filesystem's blocks
 
 Example of use:
-    Info_Ocupa_Sist_Fich -b
-    Info_Ocupa_Sist_Fich -i
-    Info_Ocupa_Sist_Fich -bi"
+    filesystem_info -b
+    filesystem_info -i
+    filesystem_info -bi"
     exit 0
 }
 
@@ -63,8 +63,8 @@ do
             done
             echo "#######################"
             ;;
-        *)  echo "Info_Ocupa_Sist_Fich: invalid option '-$OPTARG'"
-            echo "Try 'Info_Ocupa_Sist_Fich --help' for more information."
+        *)  echo "filesystem_info: invalid option '-$OPTARG'"
+            echo "Try 'filesystem_info --help' for more information."
             exit 1
     esac
 done
